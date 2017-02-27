@@ -3,5 +3,5 @@ project(crud_languages)
 
 set(CMAKE_C_STANDARD 99)
 
-set(SOURCE_FILES main.c student/student.c student/student.h professor/professor.c professor/professor.h discipline/discipline.c discipline/discipline.h class/class.c class/class.h)
+set(SOURCE_FILES main.c student/student.c student/student.h professor/professor.c professor/professor.h discipline/discipline.c discipline/discipline.h class/class.c class/class.h helpers/helpers.c helpers/helpers.h)
 add_executable(crud_languages ${SOURCE_FILES})

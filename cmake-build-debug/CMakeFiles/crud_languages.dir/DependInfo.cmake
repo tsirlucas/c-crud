@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/lucascorreia/CLionProjects/crud-languages/class/class.c" "/Users/lucascorreia/CLionProjects/crud-languages/cmake-build-debug/CMakeFiles/crud_languages.dir/class/class.c.o"
   "/Users/lucascorreia/CLionProjects/crud-languages/discipline/discipline.c" "/Users/lucascorreia/CLionProjects/crud-languages/cmake-build-debug/CMakeFiles/crud_languages.dir/discipline/discipline.c.o"
+  "/Users/lucascorreia/CLionProjects/crud-languages/helpers/helpers.c" "/Users/lucascorreia/CLionProjects/crud-languages/cmake-build-debug/CMakeFiles/crud_languages.dir/helpers/helpers.c.o"
   "/Users/lucascorreia/CLionProjects/crud-languages/main.c" "/Users/lucascorreia/CLionProjects/crud-languages/cmake-build-debug/CMakeFiles/crud_languages.dir/main.c.o"
   "/Users/lucascorreia/CLionProjects/crud-languages/professor/professor.c" "/Users/lucascorreia/CLionProjects/crud-languages/cmake-build-debug/CMakeFiles/crud_languages.dir/professor/professor.c.o"
   "/Users/lucascorreia/CLionProjects/crud-languages/student/student.c" "/Users/lucascorreia/CLionProjects/crud-languages/cmake-build-debug/CMakeFiles/crud_languages.dir/student/student.c.o"

@@ -1,7 +1,8 @@
+#include "stdio.h"
 #include "student.h"
 #include "stdlib.h"
 #include "string.h"
-#include "stdio.h"
+#include "../helpers/helpers.h"
 
 int students_index = 0;
 
@@ -16,11 +17,17 @@ void list_students() {
     }
 }
 
-struct student * create_student(char name[1000], int age) {
+struct student * create_student() {
     struct student* student = malloc(sizeof(struct student));
     student->id = students_index;
-    strcpy(student->name, name);
-    student->age = age;
+    printf("Enter a name: \n");
+    fgets (student->name, 100, stdin);
+    student->name[strcspn(student->name, "\n")] = 0;
+    printf("Enter an age: \n");
+    char age[100];
+    fgets (age, 100, stdin);
+    age[strcspn(age, "\n")] = 0;
+    student->age = atoi(age);
 
     school_students[students_index] = student;
     students_index = students_index + 1;
@@ -28,7 +35,9 @@ struct student * create_student(char name[1000], int age) {
     return student;
 }
 
-struct student * edit_student(int id) {
+struct student * edit_student() {
+    list_students();
+    int id = get_id();
     if(school_students[id] != NULL && id < students_index) {
         struct student * student = school_students[id];
         printf("Editing %s of %i years\n", student->name, student->age);
@@ -49,7 +58,9 @@ struct student * edit_student(int id) {
 
 }
 
-struct student * remove_student(int id) {
+struct student * remove_student() {
+    list_students();
+    int id = get_id();
     struct student * student = school_students[id];
     printf("Do you really want to remove %s of %i years? (y/n)\n", student->name, student->age);
     char response[100];
@@ -72,4 +83,36 @@ struct student * remove_student(int id) {
         printf("Invalid option!");
     }
     return student;
+}
+
+int student_menu() {
+    char option_string[100];
+    int option = 6;
+    while(option != 5) {
+        printf(" 1 - List\n 2 - Add\n 3 - Edit\n 4 - Remove\n 5 - Back\n");
+        fgets (option_string, 100, stdin);
+        option_string[strcspn(option_string, "\n")] = 0;
+        option = atoi(option_string);
+
+        switch (option) {
+            case 1:
+                list_students();
+                break;
+            case 2:
+                create_student();
+                break;
+            case 3:
+                edit_student();
+                break;
+            case 4:
+                remove_student();
+                break;
+            case 5:
+                printf("Backing to main menu \n");
+                break;
+            default:
+                printf("Invalid option! \n");
+        }
+    }
+    return 1;
 }

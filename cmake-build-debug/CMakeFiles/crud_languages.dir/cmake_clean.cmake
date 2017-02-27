@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/crud_languages.dir/professor/professor.c.o"
   "CMakeFiles/crud_languages.dir/discipline/discipline.c.o"
   "CMakeFiles/crud_languages.dir/class/class.c.o"
+  "CMakeFiles/crud_languages.dir/helpers/helpers.c.o"
   "crud_languages.pdb"
   "crud_languages"
 )

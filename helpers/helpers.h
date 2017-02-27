@@ -1,0 +1,6 @@
+#ifndef CRUD_LANGUAGES_HELPERS_H
+#define CRUD_LANGUAGES_HELPERS_H
+
+int get_id();
+
+#endif //CRUD_LANGUAGES_HELPERS_H

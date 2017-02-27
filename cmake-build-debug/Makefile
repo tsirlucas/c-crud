@@ -177,6 +177,33 @@ discipline/discipline.c.s:
 	$(MAKE) -f CMakeFiles/crud_languages.dir/build.make CMakeFiles/crud_languages.dir/discipline/discipline.c.s
 .PHONY : discipline/discipline.c.s
 
+helpers/helpers.o: helpers/helpers.c.o
+
+.PHONY : helpers/helpers.o
+
+# target to build an object file
+helpers/helpers.c.o:
+	$(MAKE) -f CMakeFiles/crud_languages.dir/build.make CMakeFiles/crud_languages.dir/helpers/helpers.c.o
+.PHONY : helpers/helpers.c.o
+
+helpers/helpers.i: helpers/helpers.c.i
+
+.PHONY : helpers/helpers.i
+
+# target to preprocess a source file
+helpers/helpers.c.i:
+	$(MAKE) -f CMakeFiles/crud_languages.dir/build.make CMakeFiles/crud_languages.dir/helpers/helpers.c.i
+.PHONY : helpers/helpers.c.i
+
+helpers/helpers.s: helpers/helpers.c.s
+
+.PHONY : helpers/helpers.s
+
+# target to generate assembly for a file
+helpers/helpers.c.s:
+	$(MAKE) -f CMakeFiles/crud_languages.dir/build.make CMakeFiles/crud_languages.dir/helpers/helpers.c.s
+.PHONY : helpers/helpers.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -273,6 +300,9 @@ help:
 	@echo "... discipline/discipline.o"
 	@echo "... discipline/discipline.i"
 	@echo "... discipline/discipline.s"
+	@echo "... helpers/helpers.o"
+	@echo "... helpers/helpers.i"
+	@echo "... helpers/helpers.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

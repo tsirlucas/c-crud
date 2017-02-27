@@ -94,6 +94,12 @@
 		<Unit filename="/Users/lucascorreia/CLionProjects/crud-languages/discipline/discipline.h">
 			<Option target="crud_languages"/>
 		</Unit>
+		<Unit filename="/Users/lucascorreia/CLionProjects/crud-languages/helpers/helpers.c">
+			<Option target="crud_languages"/>
+		</Unit>
+		<Unit filename="/Users/lucascorreia/CLionProjects/crud-languages/helpers/helpers.h">
+			<Option target="crud_languages"/>
+		</Unit>
 		<Unit filename="/Users/lucascorreia/CLionProjects/crud-languages/main.c">
 			<Option target="crud_languages"/>
 		</Unit>

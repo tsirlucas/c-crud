@@ -13,32 +13,70 @@ class.h
 /Users/lucascorreia/CLionProjects/crud-languages/class/class.h
 
 /Users/lucascorreia/CLionProjects/crud-languages/discipline/discipline.c
+stdio.h
+/Users/lucascorreia/CLionProjects/crud-languages/discipline/stdio.h
 discipline.h
 /Users/lucascorreia/CLionProjects/crud-languages/discipline/discipline.h
+stdlib.h
+/Users/lucascorreia/CLionProjects/crud-languages/discipline/stdlib.h
+string.h
+/Users/lucascorreia/CLionProjects/crud-languages/discipline/string.h
+../helpers/helpers.h
+/Users/lucascorreia/CLionProjects/crud-languages/helpers/helpers.h
 
 /Users/lucascorreia/CLionProjects/crud-languages/discipline/discipline.h
+
+/Users/lucascorreia/CLionProjects/crud-languages/helpers/helpers.c
+stdio.h
+/Users/lucascorreia/CLionProjects/crud-languages/helpers/stdio.h
+string.h
+/Users/lucascorreia/CLionProjects/crud-languages/helpers/string.h
+stdlib.h
+/Users/lucascorreia/CLionProjects/crud-languages/helpers/stdlib.h
+helpers.h
+/Users/lucascorreia/CLionProjects/crud-languages/helpers/helpers.h
+
+/Users/lucascorreia/CLionProjects/crud-languages/helpers/helpers.h
 
 /Users/lucascorreia/CLionProjects/crud-languages/main.c
 stdio.h
 /Users/lucascorreia/CLionProjects/crud-languages/stdio.h
+string.h
+/Users/lucascorreia/CLionProjects/crud-languages/string.h
+stdlib.h
+/Users/lucascorreia/CLionProjects/crud-languages/stdlib.h
 student/student.h
 /Users/lucascorreia/CLionProjects/crud-languages/student/student.h
+professor/professor.h
+/Users/lucascorreia/CLionProjects/crud-languages/professor/professor.h
+discipline/discipline.h
+/Users/lucascorreia/CLionProjects/crud-languages/discipline/discipline.h
 
 /Users/lucascorreia/CLionProjects/crud-languages/professor/professor.c
+stdio.h
+/Users/lucascorreia/CLionProjects/crud-languages/professor/stdio.h
 professor.h
 /Users/lucascorreia/CLionProjects/crud-languages/professor/professor.h
+stdlib.h
+/Users/lucascorreia/CLionProjects/crud-languages/professor/stdlib.h
+string.h
+/Users/lucascorreia/CLionProjects/crud-languages/professor/string.h
+../helpers/helpers.h
+/Users/lucascorreia/CLionProjects/crud-languages/helpers/helpers.h
 
 /Users/lucascorreia/CLionProjects/crud-languages/professor/professor.h
 
 /Users/lucascorreia/CLionProjects/crud-languages/student/student.c
+stdio.h
+/Users/lucascorreia/CLionProjects/crud-languages/student/stdio.h
 student.h
 /Users/lucascorreia/CLionProjects/crud-languages/student/student.h
 stdlib.h
 /Users/lucascorreia/CLionProjects/crud-languages/student/stdlib.h
 string.h
 /Users/lucascorreia/CLionProjects/crud-languages/student/string.h
-stdio.h
-/Users/lucascorreia/CLionProjects/crud-languages/student/stdio.h
+../helpers/helpers.h
+/Users/lucascorreia/CLionProjects/crud-languages/helpers/helpers.h
 
 /Users/lucascorreia/CLionProjects/crud-languages/student/student.h
 
