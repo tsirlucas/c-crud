@@ -1,0 +1,3 @@
+/Users/lucascorreia/CLionProjects/crud-languages/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/lucascorreia/CLionProjects/crud-languages/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/lucascorreia/CLionProjects/crud-languages/cmake-build-debug/CMakeFiles/crud_languages.dir

@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/cc  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/crud_languages.dir/main.c.o CMakeFiles/crud_languages.dir/student/student.c.o CMakeFiles/crud_languages.dir/professor/professor.c.o CMakeFiles/crud_languages.dir/discipline/discipline.c.o CMakeFiles/crud_languages.dir/class/class.c.o  -o crud_languages 

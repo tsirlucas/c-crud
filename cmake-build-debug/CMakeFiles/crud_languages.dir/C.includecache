@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/lucascorreia/CLionProjects/crud-languages/class/class.c
+class.h
+/Users/lucascorreia/CLionProjects/crud-languages/class/class.h
+
+/Users/lucascorreia/CLionProjects/crud-languages/class/class.h
+
+/Users/lucascorreia/CLionProjects/crud-languages/discipline/discipline.c
+discipline.h
+/Users/lucascorreia/CLionProjects/crud-languages/discipline/discipline.h
+
+/Users/lucascorreia/CLionProjects/crud-languages/discipline/discipline.h
+
+/Users/lucascorreia/CLionProjects/crud-languages/main.c
+stdio.h
+/Users/lucascorreia/CLionProjects/crud-languages/stdio.h
+student/student.h
+/Users/lucascorreia/CLionProjects/crud-languages/student/student.h
+
+/Users/lucascorreia/CLionProjects/crud-languages/professor/professor.c
+professor.h
+/Users/lucascorreia/CLionProjects/crud-languages/professor/professor.h
+
+/Users/lucascorreia/CLionProjects/crud-languages/professor/professor.h
+
+/Users/lucascorreia/CLionProjects/crud-languages/student/student.c
+student.h
+/Users/lucascorreia/CLionProjects/crud-languages/student/student.h
+stdlib.h
+/Users/lucascorreia/CLionProjects/crud-languages/student/stdlib.h
+string.h
+/Users/lucascorreia/CLionProjects/crud-languages/student/string.h
+stdio.h
+/Users/lucascorreia/CLionProjects/crud-languages/student/stdio.h
+
+/Users/lucascorreia/CLionProjects/crud-languages/student/student.h
+
