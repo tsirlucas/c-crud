@@ -61,28 +61,33 @@ struct student * edit_student() {
 struct student * remove_student() {
     list_students();
     int id = get_id();
-    struct student * student = school_students[id];
-    printf("Do you really want to remove %s of %i years? (y/n)\n", student->name, student->age);
-    char response[100];
-    fgets(response, 100, stdin);
-    response[strcspn(response, "\n")] = 0;
+    if(school_students[id] != NULL && id < students_index) {
+        struct student *student = school_students[id];
+        printf("Do you really want to remove %s of %i years? (y/n)\n", student->name, student->age);
+        char response[100];
+        fgets(response, 100, stdin);
+        response[strcspn(response, "\n")] = 0;
 
-    if(strcmp(response, "y") == 0) {
-        for (int i = id; i < students_index - 1; i++ ) {
-            school_students[i] = school_students[i + 1];
-            school_students[i]->id = i;
+        if (strcmp(response, "y") == 0) {
+            for (int i = id; i < students_index - 1; i++) {
+                school_students[i] = school_students[i + 1];
+                school_students[i]->id = i;
+            }
+            printf("%s of %i has been removed\n", student->name, student->age);
+            free(student);
+            students_index = students_index - 1;
+            return student;
+        } else if (strcmp(response, "n") == 0) {
+            printf("Remove aborted!");
+            return student;
+        } else {
+            printf("Invalid option!");
         }
-        printf("%s of %i has been removed\n", student->name, student->age);
-        free(student);
-        students_index = students_index - 1;
-        return student;
-    } else if(strcmp(response, "n") == 0) {
-        printf("Remove aborted!");
         return student;
     } else {
-        printf("Invalid option!");
+        printf("Invalid id! \n");
+        return NULL;
     }
-    return student;
 }
 
 int student_menu() {

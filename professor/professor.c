@@ -61,28 +61,33 @@ struct professor * edit_professor() {
 struct professor * remove_professor() {
     list_professors();
     int id = get_id();
-    struct professor * professor = school_professors[id];
-    printf("Do you really want to remove %s of %i years? (y/n)\n", professor->name, professor->age);
-    char response[100];
-    fgets(response, 100, stdin);
-    response[strcspn(response, "\n")] = 0;
+    if(school_professors[id] != NULL && id < professors_index) {
+        struct professor *professor = school_professors[id];
+        printf("Do you really want to remove %s of %i years? (y/n)\n", professor->name, professor->age);
+        char response[100];
+        fgets(response, 100, stdin);
+        response[strcspn(response, "\n")] = 0;
 
-    if(strcmp(response, "y") == 0) {
-        for (int i = id; i < professors_index - 1; i++ ) {
-            school_professors[i] = school_professors[i + 1];
-            school_professors[i]->id = i;
+        if (strcmp(response, "y") == 0) {
+            for (int i = id; i < professors_index - 1; i++) {
+                school_professors[i] = school_professors[i + 1];
+                school_professors[i]->id = i;
+            }
+            printf("%s of %i has been removed\n", professor->name, professor->age);
+            free(professor);
+            professors_index = professors_index - 1;
+            return professor;
+        } else if (strcmp(response, "n") == 0) {
+            printf("Remove aborted!");
+            return professor;
+        } else {
+            printf("Invalid option!");
         }
-        printf("%s of %i has been removed\n", professor->name, professor->age);
-        free(professor);
-        professors_index = professors_index - 1;
         return professor;
-    } else if(strcmp(response, "n") == 0) {
-        printf("Remove aborted!");
-        return professor;
-    } else {
-        printf("Invalid option!");
+    } else{
+        printf("Invalid id! \n");
+        return NULL;
     }
-    return professor;
 }
 
 int professor_menu() {

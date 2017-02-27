@@ -39,7 +39,7 @@ struct discipline * edit_discipline() {
         fgets (discipline->name, 1000, stdin);
         discipline->name[strcspn(discipline->name, "\n")] = 0;
 
-        printf("Edited to %s", discipline->name);
+        printf("Edited to %s\n", discipline->name);
         return discipline;
     } else {
         printf("Invalid id! \n");
@@ -51,28 +51,33 @@ struct discipline * edit_discipline() {
 struct discipline * remove_discipline() {
     list_disciplines();
     int id = get_id();
-    struct discipline * discipline = school_disciplines[id];
-    printf("Do you really want to remove %s? (y/n)\n", discipline->name);
-    char response[100];
-    fgets(response, 100, stdin);
-    response[strcspn(response, "\n")] = 0;
+    if(school_disciplines[id] != NULL && id < disciplines_index) {
+        struct discipline * discipline = school_disciplines[id];
+        printf("Do you really want to remove %s? (y/n)\n", discipline->name);
+        char response[100];
+        fgets(response, 100, stdin);
+        response[strcspn(response, "\n")] = 0;
 
-    if(strcmp(response, "y") == 0) {
-        for (int i = id; i < disciplines_index - 1; i++ ) {
-            school_disciplines[i] = school_disciplines[i + 1];
-            school_disciplines[i]->id = i;
+        if(strcmp(response, "y") == 0) {
+            for (int i = id; i < disciplines_index - 1; i++ ) {
+                school_disciplines[i] = school_disciplines[i + 1];
+                school_disciplines[i]->id = i;
+            }
+            printf("%s has been removed\n", discipline->name);
+            free(discipline);
+            disciplines_index = disciplines_index - 1;
+            return discipline;
+        } else if(strcmp(response, "n") == 0) {
+            printf("Remove aborted!");
+            return discipline;
+        } else {
+            printf("Invalid option!\n");
         }
-        printf("%s has been removed\n", discipline->name);
-        free(discipline);
-        disciplines_index = disciplines_index - 1;
         return discipline;
-    } else if(strcmp(response, "n") == 0) {
-        printf("Remove aborted!");
-        return discipline;
-    } else {
-        printf("Invalid option!");
+    } else{
+        printf("Invalid id! \n");
+        return NULL;
     }
-    return discipline;
 }
 
 int discipline_menu() {
